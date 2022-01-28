@@ -14,10 +14,9 @@ def sum_of_threes():
     acc = 0
     total = 0
     upper = eval(input("what is the upper bound?"))
-    for _ in range(upper):
-        if acc+3 <= upper:
-            acc = acc + 3
-            total = acc + total
+    for _ in range(upper // 3):
+        acc = acc + 3
+        total = acc + total
     print(total)
 
 
@@ -41,16 +40,19 @@ def sum_squares():
     lower = eval(input("Enter lower range: "))
     upper = eval(input("Enter upper range: "))
     total = 0
-    for _n_ in range(lower, upper + 1):
-        total = (_n_ ** 2) + total
+    for number in range(lower, upper + 1):
+        total = (number * number) + total
     print(total)
 
 
 def power():
     base = eval(input("Enter base:"))
     exponent = eval(input("Enter exponent:"))
-    total = base ** exponent
-    print(base, "^", exponent, " = ", total)
+    total = 1
+    for _ in range(exponent):
+        current = base
+        total = total * current
+    print(total)
 
 
 if __name__ == '__main__':

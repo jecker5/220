@@ -1,42 +1,59 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
-
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Name: Joseph Decker
+hw8.py
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
+import math
+from graphics import GraphWin
+from graphics import Circle
 
 
 def add_ten(nums):
-    pass
+    for i in range(len(nums)):
+        nums[i] += 10
 
 
 def square_each(nums):
-    pass
+    for i in range(len(nums)):
+        nums[i] = nums[i] ** 2
 
 
 def sum_list(nums):
-    pass
+    total = 0
+    for i in range(len(nums)):
+        total = total + nums[i]
+    return total
 
 
 def to_numbers(nums):
-    pass
+    for i in range(len(nums)):
+        nums[i] = float(nums[i])
 
 
 def sum_of_squares(nums):
-    pass
+    for i in nums:
+        nums = i.split(", ")
+        print(nums)
+        to_numbers(nums)
+        square_each(nums)
 
 
 def starter(weight, wins):
-    pass
+    if 150 <= weight < 160 and wins >= 5:
+        return True
+    if weight > 199 or wins > 20:
+        return True
+    else:
+        return False
 
 
 def leap_year(year):
-    pass
+    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+        return True
+    else:
+        return False
 
 
 def circle_overlap():

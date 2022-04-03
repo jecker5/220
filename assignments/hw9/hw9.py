@@ -67,7 +67,8 @@ def play_command_line(secret_word):
         print("Guesses remaining: " + str(guess_acc))
         print(make_hidden_secret(secret_word, guessed))
         current_g = input("Guess a letter: ")
-        guessed.append(current_g)
+        if already_guessed(current_g, guessed):
+            guessed.append(current_g)
         if not letter_in_secret_word(current_g, secret_word):
             guess_acc -= 1
             if guess_acc == 0:
